@@ -1,7 +1,7 @@
 var api = frameElement.api,oper = api.data.oper,id=api.data.id,$_form=$("#base_form"),
 custParame=SYSTEM.custParame,typeList=custParame.typeList,url=rootPath+"/oa/contact";
 var model = avalon.define({$id:'view',
-	data:{name:"",sex:1,mobile:"",is_main:1,post:"",department:"",saltname:"",telephone:"",idcard:"",qq:"",email:"",address:"",zip_code:"",contacts_id:"",description:"",id:"",customer_id:"",customer_name:"",custType:1},
+	data:{id:"",uname:"",sex:1,mobile:"",is_main:1,telephone:"",idcard:"",msn:"",qq:"",email:"",homeaddr:"",zip_code:"",worktel:"",description:"",company_id:""},
     parameList:typeList,customerList:[],custComboV:false,
     init:function(){},
     setSex:function(v){
@@ -32,17 +32,6 @@ var THISPAGE = {
 				}
 			});
 		}
-		/**客户*/
-		var r=$("#headCombo");
-		/*var i=Public.comBox(r,{url:rootPath+'/sso/customer/combo.json',postData:{type:1},callback:{
-			beforeClick:function(e, t) {
-				if(t.type==10){
-					r.val(t.name);model.data.head_id=t.id;i.hide();
-				}else{
-					r.val("");model.data.head_id="";
-				}
-			}}
-		});*/
 		/**客户combo END*/
 		THISPAGE.initEvent();
 	},
@@ -90,6 +79,7 @@ function postData(){
 				content : e + "成功！"
 			});
 			model.data.id=json.data.id;
+			$confirm.close();
 			parent.THISPAGE.reloadData(null);
 		} else
 			parent.parent.Public.tips({

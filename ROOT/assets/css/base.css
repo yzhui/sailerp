@@ -13,7 +13,7 @@ color: #d2160b; border-radius: 14px; font-weight: normal; }
 #nav { zoom: 1; /*border-bottom:1px solid #28688b;border-color:rgba(0,0,0,0.15);*/ }
 #nav .item { position: relative; margin-bottom: 1px; zoom: 1; float: left; width: 100%; }
 .v-standard #nav .item{ margin-bottom:0; }
-#nav .main-nav { position: relative; display: block; height: 80px; width: 100%; float: left; /*font-family:"新宋体", "宋体";*/}
+#nav .main-nav { position: relative; display: block; height: 75px; width: 100%; float: left; /*font-family:"新宋体", "宋体";*/}
 .v-standard #nav .item{ height: 84px; }
 #nav .on .main-nav { background-position: 0 -80px;}
 #nav .current .main-nav { background-position: 0 -160px;} 

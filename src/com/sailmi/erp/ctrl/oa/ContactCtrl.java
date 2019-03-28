@@ -55,6 +55,7 @@ public class ContactCtrl extends AdminBaseController<Contact> {
 			getId();
 			String uid=this.getCurrentUserId();
 			this.pullUser(po, uid);
+			System.out.println("current user id is:::::::::::::::::::::::::::::::::::::"+id);
 			if (StringUtils.isEmpty(id)) {
 				po.set("company_id", this.getCompanyId());
 				po.save();
@@ -66,6 +67,17 @@ public class ContactCtrl extends AdminBaseController<Contact> {
 		} catch (Exception e) {
 			log.error("保存产品异常", e);
 			this.rendJson(false,null, "保存数据异常！");
+		}
+	}
+	@PowerBind(code="A1_1_E",funcName="删除")
+	public void del() {
+		try {
+			getId();
+			Contact.dao.del(id,this.getCompanyId());
+			rendJson(true,null,"删除成功！",id);
+		} catch (Exception e) {
+			log.error("删除异常", e);
+			rendJson(false,null,"删除失败！");
 		}
 	}
 }

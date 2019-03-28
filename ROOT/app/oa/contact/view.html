@@ -1,24 +1,40 @@
-	<div id="tt" class="easyui-tabs" style="width: 786px; height: 450px;">
-		<div title="基本信息" style="padding:5px;">
-			<table class="tableForm tableCss">
-				<tr>
-					<th><font color=red>*</font>标题</th>
-					<td colspan="3">${(po.title)!}</td>
-				</tr>
-				<tr>
-					<th><font color=red>*</font>开会时间</th>
-					<td>${(po.starttime)!(now?string('yyyy-MM-dd'))} 至 ${(po.endtime)!} </td>
-				</tr>
-				<tr>
-					<th><font color=red>*</font>开会内容</th>
-					<td colspan="3">${(po.content)!}</td>
-				</tr>
-			</table>
-		</div>
-		<#if shareList??>
-		<div title="与会人员" style="overflow: auto; padding:5px;">
-		<#--人员组织-->
-			<#list shareList as p>${(p.fullname)!}(${(p.userno)!}-${(p.pname)!})，&nbsp;</#list>
-		</div>
-		</#if>
-	</div>
+<#include "../../inc/layout.html">
+<@layout title="个人通讯录" js="oa/contact/view.js">
+<style>
+body{background:#fff;display:block;}
+</style>
+<div class="manage-wrapper" ms-controller="view">
+   <div class="manage-wrap">
+    		<ul class="mod-form-rows base-form" >
+    			<li class="row-item">
+    				<div class="label-wrap"><label>姓名</label></div>
+    				<div class="ctn-wrap">{{data.uname}}</div>
+    			</li>
+    			<li class="row-item">
+    				<div class="label-wrap"><label>性别</label></div>
+    				<div class="ctn-wrap"><span ms-visible="data.sex==1">男</span><span ms-visible="data.sex==0">女</span></div>
+    			</li>
+    			<li class="row-item">
+    				<div class="label-wrap"><label>工作电话</label></div>
+    				<div class="ctn-wrap">{{data.worktel}}</div>
+    			</li>
+    			<li class="row-item">
+    				<div class="label-wrap"><label>手机</label></div>
+    				<div class="ctn-wrap">{{data.mobile}}</div>
+    			</li>
+    			<li class="row-item">
+    				<div class="label-wrap"><label>邮箱</label></div>
+    				<div class="ctn-wrap">{{data.email}}</div>
+    			</li>
+    			<li class="row-item">
+    				<div class="label-wrap"><label>QQ</label></div>
+    				<div class="ctn-wrap">{{data.qq}}</div>
+    			</li>
+    			<li class="row-item">
+    				<div class="label-wrap"><label>备注</label></div>
+    				<div class="ctn-wrap">{{data.description}}</div>
+    			</li>
+    		</ul>
+    </div>
+</div>
+</@layout>

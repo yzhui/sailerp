@@ -1,5 +1,6 @@
  <ul id="nav" class="cf">
- <li ms-if="showMenu('A2_1_S')" class="item item-BG"> <a href="javascript:void(0);" class="BG main-nav">办公<span class="arrow"></span></a>
+ <li ms-if="showMenu('A2_1_S')" class="item item-BG"> 
+ 	<a href="javascript:void(0);" class="BG main-nav">办公<span class="arrow"></span></a>
         <div class="sub-nav-wrap oa group-nav" style="width:200px"><#--group-nav-t0-->
          <div class="nav-item oa">
           <h3>沟通协同</h3>
@@ -25,12 +26,12 @@
 	          </ul>
           </div>
            -->
-        </div>
           
         </div>
       </li>
 <!--  客户关系 -->
- 	<li ms-if="showMenu('A1_1_S')" class="item item-kh"> <a href="javascript:void(0);" class="kh main-nav">客户<span class="arrow"></span></a>
+ 	<li ms-if="showMenu('A1_1_S')" class="item item-kh"> 
+ 		<a href="javascript:void(0);" class="kh main-nav">客户<span class="arrow"></span></a>
         <div class="sub-nav-wrap cf group-nav" style="width:300px;">
           <div class="nav-item" ms-if="showMenu('A1_1_S')">
             <h3>客户维护</h3>
@@ -68,6 +69,7 @@
           <div class="nav-item">
             <h3>销售</h3>
 	          <ul class="sub-nav" >
+	          	<li><a href="/scm/product" rel=pageTab tabid="xs-11">产品管理</a></li>
 	          	<li><a href="/scm/order?type=2" rel=pageTab tabid="xs-11">订单合同</a></li>
 	          	<li><a href="/scm/order?type=3" rel=pageTab tabid="xs-12">销售退货</a></li>
 	          </ul>
@@ -94,8 +96,9 @@
           </div>
         </div>
       </li>
- 	<li ms-if="showMenu('A4_1_S')" class="item item-zw"> <a href="javascript:void(0);" class="zw main-nav">租务<span class="arrow"></span></a>
-        <div class="sub-nav-wrap zw group-nav" style="width:300px;">
+ 	<li ms-if="showMenu('A4_1_S')" class="item item-zw"> 
+ 	<a href="javascript:void(0);" class="zw main-nav">租务<span class="arrow"></span></a>
+        <div class="sub-nav-wrap zw group-nav" style="width:500px;">
           <div class="nav-item">
             <h3>房源管理</h3>
 			  <ul class="sub-nav" >
@@ -112,7 +115,7 @@
 				<li><a href="/house" rel=pageTab tabid="zw-5">合同管理</a></li>
 			  </ul>
 		  </div>
-          <div class="nav-item zw last">
+          <div class="nav-item zw">
             <h3>租后服务</h3>
 			  <ul class="sub-nav" >
 				<li><a href="/house" rel=pageTab tabid="zw-6">维修管理</a></li>
@@ -120,9 +123,26 @@
 				<li><a href="/house" rel=pageTab tabid="zw-8">服务工单</a></li>
 			  </ul>
 		  </div>
+          <div class="nav-item zw">
+            <h3>装修管理</h3>
+			  <ul class="sub-nav" >
+				<li><a href="/em/team" rel=pageTab tabid="zx-0">项目管理</a></li>
+				<li><a href="/em/team" rel=pageTab tabid="zx-1">进度跟踪</a></li>
+				<li><a href="/em/team" rel=pageTab tabid="zx-4">验收管理</a></li>
+			  </ul>
+		   </div>
+          <div class="nav-item zw last">
+            <h3>业务配置</h3>
+			  <ul class="sub-nav" >
+				<li><a href="/em/team" rel=pageTab tabid="zx-6">风格配置</a></li>
+				<li><a href="/em/team" rel=pageTab tabid="zx-6">服务商配置</a></li>
+			  </ul>
+		   </div>
+		  
 		 </div>
       </li>
- 	<li ms-if="showMenu('A5_1_S')" class="item item-wl"> <a href="javascript:void(0);" class="wl main-nav">物料<span class="arrow"></span></a>
+ 	<li ms-if="showMenu('A5_1_S')" class="item item-wl"> 
+ 	<a href="javascript:void(0);" class="wl main-nav">物料<span class="arrow"></span></a>
         <div class="sub-nav-wrap wl group-nav" style="width:350px;">
           <div class="nav-item">
             <h3>采购</h3>
@@ -162,21 +182,36 @@
 	          	<li><a href="/scm/stockCheck/rpt" rel=pageTab tabid="BB-304">盘点明细表</a></li>
 	          </ul>
           </div>
-          </div>
        </div>
     </li>
  	<li ms-if="showMenu('A6_1_S')" class="item item-RL"> 
- 	<a href="javascript:void(0);" class="RL main-nav">人力<span class="arrow"></span></a>
-        <div class="sub-nav-wrap  rl group-nav"  style="width:100px;">
-        	<div  class="nav-item">
+ 		<a href="javascript:void(0);" class="RL main-nav">人力<span class="arrow"></span></a>
+        <ul class="sub-nav-wrap  RL group-nav"  style="width:300px;">
+          <li class="nav-item RL last">
             <h3>人员管理</h3>
-          <ul class="sub-nav" >
-          	<li><a href="/hr/employee" rel=pageTab tabid="RL-1">入职、离职</a></li>
-          </ul>
-          </div>
-        </div>
+	          <ul class="sub-nav" >
+	              	<li><a href="/hr/employee" rel=pageTab tabid="RL-1">员工档案</a></li>
+	          </ul>
+          </li>
+          <li class="nav-item RL last">
+            <h3>培训活动</h3>
+	          <ul class="sub-nav" >
+	              	<li><a href="/hr/employee" rel=pageTab tabid="RL-1">培训管理</a></li>
+	              	<li><a href="/hr/employee" rel=pageTab tabid="RL-1">活动管理</a></li>
+	          </ul>
+          </li>
+          <li class="nav-item RL last">
+            <h3>奖励绩效</h3>
+	          <ul class="sub-nav" >
+	              	<li><a href="/hr/employee" rel=pageTab tabid="RL-1">奖励项目</a></li>
+	              	<li><a href="/hr/employee" rel=pageTab tabid="RL-1">绩效评分</a></li>
+	              	<li><a href="/hr/employee" rel=pageTab tabid="RL-1">绩效奖励</a></li>
+	          </ul>
+          </li>
+        </ul>
       </li>
- 	<li ms-if="showMenu('A7_1_S')" class="item item-CW"> <a href="javascript:void(0);" class="CW main-nav">财务<span class="arrow"></span></a>
+ 	<li ms-if="showMenu('A7_1_S')" class="item item-CW"> 
+ 	<a href="javascript:void(0);" class="CW main-nav">财务<span class="arrow"></span></a>
         <div class="sub-nav-wrap cw group-nav" style="width:300px;">
           <div class="nav-item">
             <h3>外部业务</h3>
@@ -212,26 +247,14 @@
           </div>
 		</div>
       </li>
+       <!-- 
 	  <li ms-if="showMenu('A10_1_S')" class="item item-zx"> <a href="javascript:void(0);" class="zx main-nav">装修<span class="arrow"></span></a>
         <div class="sub-nav-wrap  zx group-nav" style="width:300px;">
-          <div class="nav-item">
-            <h3>装修管理</h3>
-			  <ul class="sub-nav" >
-				<li><a href="/em/team" rel=pageTab tabid="zx-0">项目管理</a></li>
-				<li><a href="/em/team" rel=pageTab tabid="zx-1">进度跟踪</a></li>
-				<li><a href="/em/team" rel=pageTab tabid="zx-4">验收管理</a></li>
-			  </ul>
-		   </div>
-          <div class="nav-item xm last">
-            <h3>装修设置</h3>
-			  <ul class="sub-nav" >
-				<li><a href="/em/team" rel=pageTab tabid="zx-6">风格配置</a></li>
-				<li><a href="/em/team" rel=pageTab tabid="zx-6">服务商配置</a></li>
-			  </ul>
-		   </div>
         </div>
       </li>
-      <li ms-if="showMenu('A8_1_S')" class="item item-BB"> <a href="javascript:void(0);" class="BB main-nav">报表<span class="arrow"></span></a>
+      -->
+      <li ms-if="showMenu('A8_1_S')" class="item item-BB"> 
+      <a href="javascript:void(0);" class="BB main-nav">报表<span class="arrow"></span></a>
        <ul class="sub-nav-wrap cf group-nav" style="min-width:120px;width:150px;">
        
           <li class="nav-item cf last" ms-if="showMenu('A8_6_S')">
@@ -246,14 +269,20 @@
           </li>
         </ul>
       </li>
-      <li ms-if="showMenu('A9_1_S')" class="item item-yun"> <a href="javascript:void(0);" class="yun main-nav">企业云<span class="arrow"></span></a>
-       <div class="sub-nav-wrap">
+      <li ms-if="showMenu('A9_1_S')" class="item item-yun"> <a href="javascript:void(0);" class="yun main-nav">寓道云<span class="arrow"></span></a>
+       <ul class="sub-nav-wrap cf group-nav" style="min-width:120px;width:150px;">
+            <h3>寓道云服务</h3>
           <ul class="sub-nav" >
-            	<li><a href="/report-zh" rel=pageTab tabid="yun-1">云知识库</a></li>
-            	<li><a href="/report-zh" rel=pageTab tabid="yun-2">企业云</a></li>
-            	<li><a href="/report-zh" rel=pageTab tabid="yun-3">云应用</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-1">房源池</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-1">租客定制</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-1">数据云</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-2">服务云</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-3">采购云</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-1">智慧云</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-1">运营云</a></li>
+            	<li><a href="/report-zh" rel=pageTab tabid="yun-1">金融云</a></li>
             </ul>
-          </div>
+          </ul>
       </li>
 
       <li class="item item-setting" > <a href="javascript:void(0);" class="setting main-nav">系统<span class="arrow"></span></a>

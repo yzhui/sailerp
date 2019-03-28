@@ -112,7 +112,7 @@ var THISPAGE = {
 				align:"center",
 				width:100
 			}, {
-				name:"updater_name",
+				name:"updater_id",
 				label:"修改人",
 				align:"center",
 				width:100,
@@ -126,7 +126,7 @@ var THISPAGE = {
 				sortable:true,
 				title:false
 			}, {
-				name:"creater_name",
+				name:"creater_id",
 				label:"创建人",
 				align:"center",
 				width:100,
@@ -184,6 +184,13 @@ var THISPAGE = {
 			t.preventDefault();
 			var e = $(this).parent().data("id");
 			THISPAGE.view(e);
+		});
+		$(".grid-wrap").on("click", "fa-trash-o", function(e) {
+			e.preventDefault();
+			if (Business.verifyRight("TD_DELETE")) {
+				var t = $(this).parent().data("id");
+				handle.operate("del", t)
+			}
 		});
 		$(".grid-wrap").on("click", ".fa-edit", function(e) {
 			e.preventDefault();
