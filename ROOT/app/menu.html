@@ -1,16 +1,21 @@
  <ul id="nav" class="cf">
  <li ms-if="showMenu('A2_1_S')" class="item item-BG"> 
  	<a href="javascript:void(0);" class="BG main-nav">办公<span class="arrow"></span></a>
-        <div class="sub-nav-wrap oa group-nav" style="width:200px"><#--group-nav-t0-->
+        <div class="sub-nav-wrap oa group-nav" style="width:300px"><#--group-nav-t0-->
          <div class="nav-item oa">
-          <h3>沟通协同</h3>
+          <h3>办公效率</h3>
           <ul class="sub-nav" >
-          	<li><a href="/oa/contact" rel=pageTab tabid="oa-1">通讯录</a></li>
           	<li><a href="/oa/beiwanglu" rel=pageTab tabid="oa-2">备忘</a></li>
           	<li><a href="/oa/calendar" rel=pageTab tabid="oa-3">日程</a></li>
-		   	<li><a href="/oa/msg" rel=pageTab tabid="oa-4">消息</a></li> 
           </ul>
          </div>
+         <div class="nav-item  oa">
+            <h3>沟通协同</h3>
+	          <ul class="sub-nav" >
+	          	<li><a href="/oa/contact" rel=pageTab tabid="oa-1">通讯录</a></li>
+			   	<li><a href="/oa/msg" rel=pageTab tabid="oa-4">消息</a></li> 
+	          </ul>
+          </div>
          <div class="nav-item  oa last">
             <h3>知识管理</h3>
 	          <ul class="sub-nav" >
@@ -34,14 +39,19 @@
  		<a href="javascript:void(0);" class="kh main-nav">客户<span class="arrow"></span></a>
         <div class="sub-nav-wrap cf group-nav" style="width:300px;">
           <div class="nav-item" ms-if="showMenu('A1_1_S')">
-            <h3>客户维护</h3>
+            <h3>客户获取</h3>
 	          <ul class="sub-nav" >
 	          	<li><a href="/crm/customer" rel=pageTab tabid="kh-1">客户信息</a></li>
 	          	<li><a href="/crm/custPool" rel=pageTab tabid="kh-2">客户池</a></li>
+	          </ul>
+          </div>
+          <div class="nav-item" ms-if="showMenu('A1_1_S')">
+            <h3>客户维护</h3>
+	          <ul class="sub-nav" >
 	          	<li><a href="/crm/contacts" rel=pageTab tabid="kh-3">联系人</a></li>
 	          	<li><a href="/crm/concatRecord" rel=pageTab tabid="kh-4">联系记录</a></li>
 	          	<li><a href="/crm/custCare" rel=pageTab tabid="kh-5">客户关怀</a></li>
-<!-- 	          	<li><a href="/crm/custMemorialday" rel=pageTab tabid="kh-6">客户纪念日</a></li> -->
+ 	          	<li><a href="/crm/custMemorialday" rel=pageTab tabid="kh-6">客户纪念日</a></li>
 	          </ul>
           </div>
           <div class="nav-item cf last" ms-if="showMenu('A1_2_S')">
@@ -142,17 +152,13 @@
       </li>
  	<li ms-if="showMenu('A5_1_S')" class="item item-wl"> 
  	<a href="javascript:void(0);" class="wl main-nav">物料<span class="arrow"></span></a>
-        <div class="sub-nav-wrap wl group-nav" style="width:350px;">
+        <div class="sub-nav-wrap wl group-nav" style="width:550px;">
           <div class="nav-item">
             <h3>采购</h3>
 			  <ul class="sub-nav" >
 				<li><a href="/scm/order?type=0" rel=pageTab tabid="wl-1">进货</a></li>
 				<li><a href="/scm/order?type=1" rel=pageTab tabid="wl-3">采购退货</a></li>
 				<li><a href="/?go=scm/supplier/index" rel=pageTab tabid="wl-2">供应商</a></li>
-				<li><a href="/scm/stock/warn" rel=pageTab tabid="wl-4">库存预警</a></li>
-				<li><a href="/scm/product" rel=pageTab tabid="wl-5">商品</a></li>
-				<li><a href="/scm/productPriceOrder" rel=pageTab tabid="wl-6">商品价目</a></li>
-	           	<li><a href="/scm/productCate" rel=pageTab tabid="wl-7">商品类别</a></li> 
 			  </ul>
 		  </div>
           <div class="nav-item">
@@ -161,26 +167,39 @@
 				<li><a href="/scm/storageBill" rel=pageTab tabid="wl-8">出入库</a></li>
 				<li><a href="/scm/stockAllot" rel=pageTab tabid="wl-9">调拨</a></li>
 				<li><a href="/scm/stockCheck" rel=pageTab tabid="wl-10">盘点</a></li>
-				<li><a href="/scm/stock/now" rel=pageTab tabid="wl-11">当前库存</a></li>
-				<li><a href="/scm/stock/warn" rel=pageTab tabid="wl-12">库存预警</a></li>
 				<li><a href="/scm/stock/init" rel=pageTab tabid="wl-13">初始化</a></li>
-				<li><a href="/scm/storageBill/flowBill" rel=pageTab tabid="wl-14">库存流水</a></li>
+			  </ul>
+        </div>
+          <div class="nav-item">
+            <h3>相关配置</h3>
+			  <ul class="sub-nav" >
+				<li><a href="/scm/product" rel=pageTab tabid="wl-5">商品</a></li>
+				<li><a href="/scm/productPriceOrder" rel=pageTab tabid="wl-6">商品价目</a></li>
+	           	<li><a href="/scm/productCate" rel=pageTab tabid="wl-7">商品类别</a></li> 
 				<li><a href="/scm/depot" rel=pageTab tabid="wl-15">仓库设置</a></li>
 			  </ul>
         </div>
-          <div class="nav-item wl last">
-   		
-            <h3>报表</h3>
+         <div class="nav-item wl ">
+            <h3>采购报表</h3>
 	          <ul class="sub-nav" >
-<!-- 	          	<li><a href="/scm/order" rel=pageTab tabid="BB-200">采购订单跟踪表</a></li> -->
+ 	          	<li><a href="/scm/order" rel=pageTab tabid="BB-200">采购订单跟踪表</a></li> 
 	          	<li><a href="/scm/order/rpt1?type=1" rel=pageTab tabid="BB-201">采购明细表</a></li>
 	          	<li><a href="/scm/order/rpt?type=1&f=0" rel=pageTab tabid="BB-202">采购汇总(按商品)</a></li>
 	          	<li><a href="/scm/order/rpt?type=1&f=1" rel=pageTab tabid="BB-203">采购汇总(按供应商)</a></li>
-	          	<li><a href="/scm/storageBill/rpt" rel=pageTab tabid="BB-300">收发明细表</a></li>
-	          	<li><a href="/scm/stockAllot/rpt" rel=pageTab tabid="BB-302">调拨明细表</a></li>
-	          	<li><a href="/scm/stockCheck/rpt" rel=pageTab tabid="BB-304">盘点明细表</a></li>
 	          </ul>
           </div>
+          <div class="nav-item wl last">
+            <h3>库存报表</h3>
+			  <ul class="sub-nav" >
+				<li><a href="/scm/stock/now" rel=pageTab tabid="wl-11">当前库存</a></li>
+				<li><a href="/scm/stock/warn" rel=pageTab tabid="wl-12">库存预警</a></li>
+				<li><a href="/scm/storageBill/flowBill" rel=pageTab tabid="wl-14">库存流水</a></li>
+	          	<li><a href="/scm/stockAllot/rpt" rel=pageTab tabid="BB-302">调拨明细表</a></li>
+	          	<li><a href="/scm/stockCheck/rpt" rel=pageTab tabid="BB-304">盘点明细表</a></li>
+	          	<li><a href="/scm/storageBill/rpt" rel=pageTab tabid="BB-300">收发明细表</a></li>
+			  </ul>
+        </div>
+
        </div>
     </li>
  	<li ms-if="showMenu('A6_1_S')" class="item item-RL"> 
