@@ -83,14 +83,13 @@
 	          </ul>
           </div>
           <div class="nav-item cf last">
-                      <h3>销售报表</h3>
+              <h3>销售报表</h3>
 	          <ul class="sub-nav" >
 	          	<li><a href="/scm/order/rpt" rel=pageTab tabid="BB-100">销售汇总(按商品)</a></li>
 	          	<li><a href="/scm/order/rpt?f=1" rel=pageTab tabid="BB-101">销售汇总(按客户)</a></li>
 	          	<li><a href="/scm/order/rpt?f=2" rel=pageTab tabid="BB-102">销售汇总(按销售员)</a></li>
 	          	<li><a href="/scm/order/rpt1" rel=pageTab tabid="BB-103">销售明细表</a></li>
-<!-- 	          	<li><a href="/scm/order/track" rel=pageTab tabid="BB-104">销售订单跟踪表</a></li> -->
-	          	<li><a href="/fa/payReceivAbles/wlqk" rel=pageTab tabid="BB-105">往来单位欠款表</a></li>
+ 	          	<li><a href="/scm/order/track" rel=pageTab tabid="BB-104">销售订单跟踪表</a></li> 
 	          </ul>
           
           </div>
@@ -212,25 +211,27 @@
       </li>
  	<li ms-if="showMenu('A7_1_S')" class="item item-CW"> 
  	<a href="javascript:void(0);" class="CW main-nav">财务<span class="arrow"></span></a>
-        <div class="sub-nav-wrap cw group-nav" style="width:300px;">
+        <div class="sub-nav-wrap cw group-nav" style="width:400px;">
           <div class="nav-item">
-            <h3>外部业务</h3>
+            <h3>往来业务</h3>
   		    <ul class="sub-nav" >
 				<li><a href="/fa/payReceivAbles" rel=pageTab tabid="CW-1">应收应付</a></li>
 				<li><a href="/fa/payReceivOrder" rel=pageTab tabid="CW-3">收款付款</a></li>
-				<li><a href="/fa/wlqiankuan" rel=pageTab tabid="CW-6">往来欠款</a></li> 
+   	          	<li><a href="/fa/payReceivAbles/wlqk" rel=pageTab tabid="BB-105">往来单位欠款表</a></li>
+	          	<li><a href="/scm/order/duizhang?type=1" rel=pageTab tabid="BB-02">客户对账表</a></li> 
+	          	<li><a href="/scm/order/duizhang?type=2" rel=pageTab tabid="BB-03">供应商对账表</a></li> 
 			</ul>
 		  </div>			
           <div class="nav-item">
-            <h3>内部业务</h3>
+            <h3>现金预算</h3>
   		    <ul class="sub-nav" >
 				<li><a href="/fa/payReceivAbles" rel=pageTab tabid="CW-0">预算管理</a></li> 
 				<li><a href="/fa/invoice" rel=pageTab tabid="CW-5">票据管理</a></li>
 				<li><a href="/fa" rel=pageTab tabid="CW-7">费用报销</a></li> 
+	          	<li><a href="/fa/account/rpt" rel=pageTab tabid="BB-05">现金银行表</a></li>
 			</ul>
         </div>
-        
-        
+       
         <div class="nav-item cw last">
             <h3>财务报表</h3>
 	          <ul class="sub-nav" >
@@ -238,10 +239,6 @@
 	          	<li><a href="/fa/payReceivAbles/rpt?type=0" rel=pageTab tabid="BB-003">应付明细报表</a></li>
 	          	<li><a href="/fa/payReceivAbles/rptsum?type=1" rel=pageTab tabid="BB-01">应收汇总报表</a></li>
 	          	<li><a href="/fa/payReceivAbles/rptsum?type=0" rel=pageTab tabid="BB-04">应付汇总报表</a></li>
-<!-- 	          	<li><a href="/scm/order/duizhang?type=1" rel=pageTab tabid="BB-02">客户对账表</a></li> -->
-<!-- 	          	<li><a href="/scm/order/duizhang?type=2" rel=pageTab tabid="BB-03">供应商对账表</a></li> -->
-	          	<li><a href="/fa/account/rpt" rel=pageTab tabid="BB-05">现金银行表</a></li>
-<!-- 	          	<li><a href="/fa/incomeStatment" rel=pageTab tabid="BB-06">损益表</a></li> -->
 	          	<li><a href="/fa/payReceivOrder/rpt1" rel=pageTab tabid="BB-06">科目收支报表</a></li>
 	          </ul>
           </div>
@@ -260,11 +257,6 @@
           <li class="nav-item cf last" ms-if="showMenu('A8_6_S')">
             <h3>综合报表</h3>
 	          <ul class="sub-nav" >
-	          	<li><a href="/scm/saleFunnel" rel=pageTab tabid="xs-21">综合汇总报表</a></li>
-	          	<li><a href="/report-cy" rel=pageTab tabid="BB-2">常用报表</a></li>
-	          	<li><a href="/report-gszh" rel=pageTab tabid="BB-3">公司账户统计</a></li>
-	          	<li><a href="/report-nzxs" rel=pageTab tabid="BB-4">年终销售报表</a></li>
-	          	<li><a href="/report-mb" rel=pageTab tabid="BB-5">企业驾驶舱</a></li>
 	          </ul>
           </li>
         </ul>
